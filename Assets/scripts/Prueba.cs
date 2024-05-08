@@ -5,7 +5,7 @@ using UnityEngine;
 public class Prueba : MonoBehaviour
 {
      private Vector3 originalScale;
-    public float enlargementFactor = 1.2f;
+    public float enlargementFactor = 2.0f;
     public Vector2 desiredCornerPosition = new Vector2(-268, -2); // Cambia las coordenadas según tu diseño
     private bool isCursorOverCard = false;
     public GameObject enlargedCardUI; // Asigna el objeto UI de la carta agrandada en el Inspector

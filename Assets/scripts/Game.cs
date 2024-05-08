@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace Program{
 public class Game : MonoBehaviour 
@@ -31,7 +32,7 @@ public List <GameObject> asedio2 = new List<GameObject>();
 List <GameObject> newasedio1 = new List<GameObject>();
  List <GameObject> newasedio2 = new List<GameObject>();
 
-// ====================================================== mezclar ambos mazos hasta que tengan 24 cartas.
+
 void shuffle(int cantidad) {
 for (int x=0; x<Deck.Count; x++){
   Deck1.Add(Deck[x]);
@@ -53,7 +54,7 @@ while (Deck2.Count!=cantidad){
 }
 
 
-//================================================================== cuantas cartas debe robar cada jugador
+
 
 void draw(int n, bool P1, bool P2) {
 
@@ -95,9 +96,9 @@ void draw(int n, bool P1, bool P2) {
 
 }
 }
- //============================================================= jugarcarta bool jugador es true si juega el jugador 1, sino es false.
+ 
 
-bool turn = true ; // cuando turno tiene valor true le toca jugar al jugador 1 si es false le toca jugar al jugador 2.
+bool turn = true ; 
 
  int n;
  int vict = 0;
@@ -133,7 +134,7 @@ bool turn = true ; // cuando turno tiene valor true le toca jugar al jugador 1 s
   
  }
 
-// si n=1 entonces se activa lilo si es=2 se activa  hamsterviel
+
 
  public void playerboss(int n){
 
@@ -191,7 +192,7 @@ bool turn = true ; // cuando turno tiene valor true le toca jugar al jugador 1 s
  }
 
 
-//=============================================================== START
+
 
  private void Start() {
  power1.text = "0";
@@ -203,25 +204,46 @@ bool turn = true ; // cuando turno tiene valor true le toca jugar al jugador 1 s
    
  }
 
- //====================================================== actualizacion en cada frame de las cartas
+ 
 
 
 void actualizacion(){
 
-  // actualizar la imagen que tapan las cartas en cada turno.
+  
 
   if(turn){
     downcard1.enabled = false;
     downcard2.enabled = true;
+    for(int i=0;i<hand2.Count;i++)
+    {
+      Button rr = hand2[i].GetComponentInChildren<Button>();
+      rr.image.enabled=false;
+    }
+     for(int i=0;i<hand1.Count;i++)
+    {
+      Button rr = hand1[i].GetComponentInChildren<Button>();
+      rr.image.enabled=true;
+    }
+    
+
   }
   else {
     downcard1.enabled = true;
     downcard2.enabled = false;
+    for(int i=0;i<hand2.Count;i++)
+    {
+      Button rr = hand2[i].GetComponentInChildren<Button>();
+      rr.image.enabled=true;
+    }
+     for(int i=0;i<hand1.Count;i++)
+    {
+      Button rr = hand1[i].GetComponentInChildren<Button>();
+      rr.image.enabled=false;
+    }
   }
 
 
-  // actualicemos los puntajes en cada frame; 
-  // puntage del j1.
+ 
   int c=0;
 
   for (int x=0; x< newcuerpoacuerpo1.Count; x++){
@@ -239,7 +261,7 @@ void actualizacion(){
   
   power1.text = c.ToString();
 
-   // puntage del j1.
+   
   c=0;
  
  for (int x=0; x< newcuerpoacuerpo2.Count; x++){
@@ -257,11 +279,11 @@ void actualizacion(){
   
   power2.text = c.ToString();
 
-  // actualizamos la mano del jugador 1 en cada frame.
+  
 
   for(int x=0 ; x<newhand1.Count ; x++){
       Button aux = hand1[x].GetComponentInChildren<Button>();
-      if(!aux.GetComponent<Image>().enabled) aux.GetComponent<Image>().enabled = true;
+    
       Button aux2 = newhand1[x].GetComponentInChildren<Button>();
       aux.image.sprite = aux2.image.sprite;
   }
@@ -270,11 +292,11 @@ void actualizacion(){
     aux.GetComponent<Image>().enabled = false;
   }
 
-  // actualizamos la mano del jugador 2 en cada frame.
+  
 
   for(int x=0 ; x<newhand2.Count ; x++){
       Button aux = hand2[x].GetComponentInChildren<Button>();
-      if(!aux.GetComponent<Image>().enabled) aux.GetComponent<Image>().enabled = true;
+   
       Button aux2 = newhand2[x].GetComponentInChildren<Button>();
       aux.image.sprite = aux2.image.sprite;
   }
@@ -283,7 +305,7 @@ void actualizacion(){
     aux.GetComponent<Image>().enabled = false;
   }
 
- // actualizemos la fila de ataque cuerpo a cuerpo del jugador 1.
+ 
 
   for(int x=0 ; x<newcuerpoacuerpo1.Count ; x++){
       Button aux = cuerpoacuerpo1[x].GetComponentInChildren<Button>();
@@ -296,7 +318,7 @@ void actualizacion(){
     aux.GetComponent<Image>().enabled = false;
   }
 
-   // actualizemos la fila de ataque cuerpo a cuerpo del jugador 2.
+   
 
   for(int x=0 ; x<newcuerpoacuerpo2.Count ; x++){
       Button aux = cuerpoacuerpo2[x].GetComponentInChildren<Button>();
@@ -309,7 +331,7 @@ void actualizacion(){
     aux.GetComponent<Image>().enabled = false;
   }
 
- // actualizemos la fila de ataque a distancia del jugador 1.
+ 
 
   for(int x=0 ; x<newdistancia1.Count ; x++){
       Button aux = distancia1[x].GetComponentInChildren<Button>();
@@ -322,7 +344,7 @@ void actualizacion(){
     aux.GetComponent<Image>().enabled = false;
   }
   
-  // actualizemos la fila de ataque a distancia del jugador 2.
+  
 
   for(int x=0 ; x<newdistancia2.Count ; x++){
       Button aux = distancia2[x].GetComponentInChildren<Button>();
@@ -335,7 +357,7 @@ void actualizacion(){
     aux.GetComponent<Image>().enabled = false;
   }
 
-   // actualizemos la fila de asedio del jugador 1.
+   
 
   for(int x=0 ; x<newasedio1.Count ; x++){
       Button aux = asedio1[x].GetComponentInChildren<Button>();
@@ -348,7 +370,7 @@ void actualizacion(){
     aux.GetComponent<Image>().enabled = false;
   }
 
-    // actualizemos la fila de asedio del jugador 2.
+    
 
   for(int x=0 ; x<newasedio2.Count ; x++){
       Button aux = asedio2[x].GetComponentInChildren<Button>();
@@ -363,7 +385,7 @@ void actualizacion(){
 
 
 }
-   // ============================================== limpiar todo el campo de ambos jugadores;
+   
    void cleangame(){
     newcuerpoacuerpo1.Clear();
     newcuerpoacuerpo2.Clear();
@@ -373,7 +395,7 @@ void actualizacion(){
     newasedio2.Clear();
    }
   
-  //===============================================verificar quien gana en una partida.
+  
   void win (){
     if(vict==2){
 
@@ -399,8 +421,30 @@ void actualizacion(){
      cleangame();
      draw(2, true, true);
      vict=0;
+     gameover ();
     }
   }
+
+  void gameover()
+{
+  if(gamewins1.text == gamewins2.text && gamewins1.text == "2")
+  {
+    SceneManager.LoadScene("Empate");
+
+    return ;
+  }
+
+  if(gamewins1.text == "2")
+  {
+    SceneManager.LoadScene("WinPlayer1");
+  }
+
+  if(gamewins2.text == "2")
+  {
+    SceneManager.LoadScene("WinPlayer2");
+  }
+
+}
 
  private void Update() {
     actualizacion();
