@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 22190171}
   - component: {fileID: 22190170}
   - component: {fileID: 22190173}
+  - component: {fileID: 22190174}
   m_Layer: 5
   m_Name: carta (8)
   m_TagString: Untagged
@@ -327,7 +328,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &22190174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22190168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 10
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 10
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &24498976
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +575,7 @@ GameObject:
   - component: {fileID: 47434058}
   - component: {fileID: 47434057}
   - component: {fileID: 47434060}
+  - component: {fileID: 47434061}
   m_Layer: 5
   m_Name: carta (7)
   m_TagString: Untagged
@@ -673,7 +720,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &47434061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47434055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 9
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 9
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &57338511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,6 +1207,7 @@ GameObject:
   - component: {fileID: 142562161}
   - component: {fileID: 142562160}
   - component: {fileID: 142562163}
+  - component: {fileID: 142562164}
   m_Layer: 5
   m_Name: carta (9)
   m_TagString: Untagged
@@ -1259,7 +1352,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &142562164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142562158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &202691592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,6 +1510,7 @@ GameObject:
   - component: {fileID: 234083089}
   - component: {fileID: 234083088}
   - component: {fileID: 234083091}
+  - component: {fileID: 234083092}
   m_Layer: 5
   m_Name: carta (1)
   m_TagString: Untagged
@@ -1516,7 +1655,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &234083092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234083086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &244169472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,6 +1799,7 @@ GameObject:
   - component: {fileID: 250323385}
   - component: {fileID: 250323384}
   - component: {fileID: 250323387}
+  - component: {fileID: 250323388}
   m_Layer: 5
   m_Name: carta (4)
   m_TagString: Untagged
@@ -1759,7 +1944,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &250323388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250323382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &250336533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,6 +2003,7 @@ GameObject:
   - component: {fileID: 250336536}
   - component: {fileID: 250336535}
   - component: {fileID: 250336538}
+  - component: {fileID: 250336539}
   m_Layer: 5
   m_Name: carta (2)
   m_TagString: Untagged
@@ -1917,7 +2148,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &250336539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250336533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &251794426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,6 +2282,7 @@ GameObject:
   - component: {fileID: 311707516}
   - component: {fileID: 311707515}
   - component: {fileID: 311707518}
+  - component: {fileID: 311707519}
   m_Layer: 5
   m_Name: carta (8)
   m_TagString: Untagged
@@ -2150,7 +2427,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &311707519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311707513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 10
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 10
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &317638877
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2486,7 @@ GameObject:
   - component: {fileID: 317638880}
   - component: {fileID: 317638879}
   - component: {fileID: 317638882}
+  - component: {fileID: 317638883}
   m_Layer: 5
   m_Name: carta (3)
   m_TagString: Untagged
@@ -2308,7 +2631,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &317638883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317638877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &317973249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2893,24 +3261,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 0
   tipe: 67
---- !u!1 &417837914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1304941012876117688, guid: 5703a190656003c4ab8f74c128e2ab64, type: 3}
-  m_PrefabInstance: {fileID: 1583049457}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &417837919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 417837914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
 --- !u!1 &426512104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,6 +3297,7 @@ RectTransform:
   - {fileID: 244169473}
   - {fileID: 1379988539}
   - {fileID: 481220249}
+  - {fileID: 2028250907}
   m_Father: {fileID: 1403300155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3351,6 +3702,7 @@ GameObject:
   - component: {fileID: 486441138}
   - component: {fileID: 486441137}
   - component: {fileID: 486441141}
+  - component: {fileID: 486441142}
   m_Layer: 5
   m_Name: carta (9)
   m_TagString: Untagged
@@ -3495,7 +3847,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &486441142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486441135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &498500936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,6 +4026,7 @@ GameObject:
   - component: {fileID: 505574886}
   - component: {fileID: 505574885}
   - component: {fileID: 505574888}
+  - component: {fileID: 505574889}
   m_Layer: 5
   m_Name: carta (9)
   m_TagString: Untagged
@@ -3773,7 +4171,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &505574889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505574883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &510564361
 GameObject:
   m_ObjectHideFlags: 0
@@ -4022,6 +4465,7 @@ GameObject:
   - component: {fileID: 569006899}
   - component: {fileID: 569006898}
   - component: {fileID: 569006901}
+  - component: {fileID: 569006902}
   m_Layer: 5
   m_Name: carta (6)
   m_TagString: Untagged
@@ -4166,7 +4610,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &569006902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569006896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 8
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 8
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &573219727
 GameObject:
   m_ObjectHideFlags: 0
@@ -4634,7 +5123,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4945,6 +5434,7 @@ GameObject:
   - component: {fileID: 723606246}
   - component: {fileID: 723606245}
   - component: {fileID: 723606248}
+  - component: {fileID: 723606249}
   m_Layer: 5
   m_Name: carta (7)
   m_TagString: Untagged
@@ -5089,7 +5579,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &723606249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723606243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 9
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 9
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &724888221
 GameObject:
   m_ObjectHideFlags: 0
@@ -5470,10 +6005,7 @@ PrefabInstance:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1715868440545507817, guid: 8f14674bb2bedca42b54657611e7fcee, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 952528790}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f14674bb2bedca42b54657611e7fcee, type: 3}
 --- !u!1 &775469390
 GameObject:
@@ -5738,6 +6270,7 @@ GameObject:
   - component: {fileID: 804857770}
   - component: {fileID: 804857769}
   - component: {fileID: 804857772}
+  - component: {fileID: 804857773}
   m_Layer: 5
   m_Name: carta (6)
   m_TagString: Untagged
@@ -5882,7 +6415,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &804857773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804857767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 8
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 8
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &817945122
 GameObject:
   m_ObjectHideFlags: 0
@@ -7031,24 +7609,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950540699}
   m_CullTransparentMesh: 1
---- !u!1 &952528785 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1715868440545507817, guid: 8f14674bb2bedca42b54657611e7fcee, type: 3}
-  m_PrefabInstance: {fileID: 756777840}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &952528790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952528785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
 --- !u!1 &956086283
 GameObject:
   m_ObjectHideFlags: 0
@@ -7109,7 +7669,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7504,6 +8064,7 @@ GameObject:
   - component: {fileID: 1065756229}
   - component: {fileID: 1065756228}
   - component: {fileID: 1065756231}
+  - component: {fileID: 1065756232}
   m_Layer: 5
   m_Name: carta (1)
   m_TagString: Untagged
@@ -7648,7 +8209,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &1065756232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065756226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1076883697
 GameObject:
   m_ObjectHideFlags: 0
@@ -8159,6 +8765,7 @@ MonoBehaviour:
   - {fileID: 416683491}
   - {fileID: 754262614}
   - {fileID: 116404523}
+  Agrandar: {fileID: 2028250908}
 --- !u!1 &1180490688
 GameObject:
   m_ObjectHideFlags: 0
@@ -8394,7 +9001,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8687,6 +9294,7 @@ GameObject:
   - component: {fileID: 1241074781}
   - component: {fileID: 1241074780}
   - component: {fileID: 1241074783}
+  - component: {fileID: 1241074784}
   m_Layer: 5
   m_Name: carta (5)
   m_TagString: Untagged
@@ -8831,7 +9439,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &1241074784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241074778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 7
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 7
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1248724237
 GameObject:
   m_ObjectHideFlags: 0
@@ -9943,7 +10596,6 @@ RectTransform:
   - {fileID: 230206642}
   - {fileID: 2034254193}
   - {fileID: 1265155908}
-  - {fileID: 2028250907}
   m_Father: {fileID: 1165014672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9964,6 +10616,7 @@ GameObject:
   - component: {fileID: 1417928782}
   - component: {fileID: 1417928781}
   - component: {fileID: 1417928784}
+  - component: {fileID: 1417928785}
   m_Layer: 5
   m_Name: carta (5)
   m_TagString: Untagged
@@ -10108,7 +10761,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &1417928785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417928779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 7
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 7
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1436525341
 GameObject:
   m_ObjectHideFlags: 0
@@ -10920,6 +11618,7 @@ GameObject:
   - component: {fileID: 1560055144}
   - component: {fileID: 1560055143}
   - component: {fileID: 1560055146}
+  - component: {fileID: 1560055147}
   m_Layer: 5
   m_Name: carta (4)
   m_TagString: Untagged
@@ -11064,7 +11763,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &1560055147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560055141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1563537872
 GameObject:
   m_ObjectHideFlags: 0
@@ -11498,10 +12242,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1304941012876117688, guid: 5703a190656003c4ab8f74c128e2ab64, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 417837919}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5703a190656003c4ab8f74c128e2ab64, type: 3}
 --- !u!1 &1588209812
 GameObject:
@@ -12972,6 +13713,7 @@ GameObject:
   - component: {fileID: 1815332376}
   - component: {fileID: 1815332375}
   - component: {fileID: 1815332378}
+  - component: {fileID: 1815332379}
   m_Layer: 5
   m_Name: carta (9)
   m_TagString: Untagged
@@ -13116,7 +13858,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &1815332379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815332373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1832299135
 GameObject:
   m_ObjectHideFlags: 0
@@ -13409,7 +14196,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13785,6 +14572,7 @@ GameObject:
   - component: {fileID: 1951138107}
   - component: {fileID: 1951138106}
   - component: {fileID: 1951138109}
+  - component: {fileID: 1951138110}
   m_Layer: 5
   m_Name: carta (2)
   m_TagString: Untagged
@@ -13929,7 +14717,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &1951138110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951138104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1962039981
 GameObject:
   m_ObjectHideFlags: 0
@@ -14143,16 +14976,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028250906}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1403300155}
+  m_Father: {fileID: 426512105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -268, y: -2}
+  m_AnchoredPosition: {x: -268.00003, y: -2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028250908
@@ -14162,13 +14995,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028250906}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14571,6 +15404,7 @@ GameObject:
   - component: {fileID: 2099978846}
   - component: {fileID: 2099978845}
   - component: {fileID: 2099978848}
+  - component: {fileID: 2099978849}
   m_Layer: 5
   m_Name: carta (3)
   m_TagString: Untagged
@@ -14715,7 +15549,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4322e4afde55da4c806c1da9814f778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargementFactor: 2.2
+  enlargementFactor: 1.2
+--- !u!114 &2099978849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099978843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: AgrandarCarta
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1165014673}
+          m_TargetAssemblyTypeName: Program.Game, Assembly-CSharp
+          m_MethodName: RemoveAgrandar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2123902856
 GameObject:
   m_ObjectHideFlags: 0

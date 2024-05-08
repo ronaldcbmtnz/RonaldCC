@@ -32,6 +32,8 @@ public List <GameObject> asedio2 = new List<GameObject>();
 List <GameObject> newasedio1 = new List<GameObject>();
  List <GameObject> newasedio2 = new List<GameObject>();
 
+ public Image Agrandar ;
+
 
 void shuffle(int cantidad) {
 for (int x=0; x<Deck.Count; x++){
@@ -189,6 +191,24 @@ bool turn = true ;
  if(!turn) turn = true;
  else turn = false;
 
+ }
+ public void AgrandarCarta(int n)
+ {
+  Button rr;
+  if(turn)
+  {
+    rr=newhand1[n-1].GetComponentInChildren<Button>();
+  }
+  else
+  {
+    rr=newhand2[n-1].GetComponentInChildren<Button>();
+  }
+  Agrandar.GetComponent<Image>().enabled=true;
+  Agrandar.sprite=rr.image.sprite;
+ }
+ public void RemoveAgrandar()
+ {
+  Agrandar.GetComponent<Image>().enabled=false;
  }
 
 

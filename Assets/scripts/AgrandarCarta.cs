@@ -5,7 +5,7 @@ using UnityEngine;
 public class AgrandarCarta : MonoBehaviour
 {
   private Vector3 originalScale; // Tamaño original de la carta
-    public float enlargementFactor = 2.5f; // Factor de agrandamiento
+    public float enlargementFactor = 1.2f; // Factor de agrandamiento
   
     private void Start()
     {
