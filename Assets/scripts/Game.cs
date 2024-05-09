@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
+using Unity.Collections;
 
 namespace Program{
 public class Game : MonoBehaviour 
@@ -32,12 +33,36 @@ public List <GameObject> asedio2 = new List<GameObject>();
 List <GameObject> newasedio1 = new List<GameObject>();
  List <GameObject> newasedio2 = new List<GameObject>();
 
+ List <int> valcuerpoacuerpo1 = new List <int> ();
+ 
+ List <int> valcuerpoacuerpo2 = new List <int> ();
+ 
+ List <int> valordistancia1 = new List <int> ();
+ 
+ List <int> valordistancia2 = new List <int> ();
+ 
+ List <int> valorasedio1 = new List <int> ();
+ 
+ List <int> valorasedio2 = new List <int> ();
+
  public Image Agrandar ;
+
+ /*
+
+ El metodo shuffle es el que vamos a emplear para crear los mazos de cada jugador. Este recibe un entero que sera la cantidad de cartas
+ que queremos que tenga cada mazo, luego a cada mazo (Deck1 y Deck2) se le añaden todas las cartas de la lista que contiene a las cartas(Deck).
+ Despues de esto se eliminan cartas al azar de cada mazo hasta tener cantidad de cartas igual al entero recibido.
+
+*/
 
 
 void shuffle(int cantidad) {
 for (int x=0; x<Deck.Count; x++){
   Deck1.Add(Deck[x]);
+
+}
+for(int x=Deck.Count-1; x>=0;x--)
+{
   Deck2.Add(Deck[x]);
 }
 
@@ -54,9 +79,12 @@ while (Deck2.Count!=cantidad){
 }
 
 }
+/*
 
+El metodo draw recibe un entero que es la cantidad de cartas de cada mano (10) y dos booleanos que representa si le toca robar a J1 o J2,
+en este caso ambos booleanos comienzan en true ya que es el robo inicial(los dos roban 10 cartas). 
 
-
+*/
 
 void draw(int n, bool P1, bool P2) {
 
@@ -67,14 +95,13 @@ void draw(int n, bool P1, bool P2) {
    if (c == hand1.Count) return ;
    c = Math.Min(n,Math.Abs(hand1.Count - c));
 
-   for (int x=0 ;  x<c; x++){
+   for (int x=0 ; x<c; x++){
 
        newhand1.Add(Deck1[0]);
        Button aux  = newhand1[newhand1.Count-1].GetComponentInChildren<Button>();
        Button aux2 = Deck1[0].GetComponentInChildren<Button>();
        aux.image.sprite = aux2.image.sprite;
-      
-      Deck1.RemoveAt(0);
+       Deck1.RemoveAt(0);
    }
   
  }
@@ -99,10 +126,14 @@ void draw(int n, bool P1, bool P2) {
 }
 }
  
-
+// la variable booleana turno si es true es el turno de J1 y si es false es el turno de J2
 bool turn = true ; 
 
+/* en esta variable n vamos a guardar la posicion en la mano de la carta que ha sido jugada para posteriormente 
+ pasarla al campo y eliminarla de la mano */
  int n;
+
+ // En n llevaremos el conteo de las veces que se le da al boton pass por cada jugador, el cual se reiniciara cada vez que se juegue una carta
  int vict = 0;
 
  public void playercard1(int aux){
@@ -117,9 +148,35 @@ bool turn = true ;
 
   if (turn){
  CardDataBase script = newhand1[n-1].GetComponent<CardDataBase>();
-  if(script.tipe == 'c' ) newcuerpoacuerpo1.Add(newhand1[n-1]);
-  if(script.tipe == 'd' ) newdistancia1.Add(newhand1[n-1]);
-  if(script.tipe == 'a' ) newasedio1.Add(newhand1[n-1]);
+
+  if(script.tipe == 'c' ) 
+  {
+  newcuerpoacuerpo1.Add(newhand1[n-1]);
+  valcuerpoacuerpo1.Add(script.power);
+  }
+  if(script.tipe == 'd' ) 
+  {
+   newdistancia1.Add(newhand1[n-1]);
+    valordistancia1.Add(script.power);
+  }
+  if(script.tipe == 'a' ){
+   newasedio1.Add(newhand1[n-1]);
+    valorasedio1.Add(script.power);
+   }
+  if(script.tipe == 'w'){
+    // power1.text=(int.Parse(power1.text)+script.power).ToString();
+  
+    for(int x =0; x< valcuerpoacuerpo1.Count; x++){
+     valcuerpoacuerpo1[x]++;
+    }
+        for(int x =0; x< valordistancia1.Count; x++){
+       valordistancia1[x]++;
+    }
+    for(int x =0; x< newasedio1.Count; x++){
+     valorasedio1[x]++;
+    }
+
+  }
   newhand1.RemoveAt(n-1);
   turn = false;
   return ;
@@ -127,9 +184,32 @@ bool turn = true ;
 
   if(!turn){
   CardDataBase script = newhand2[n-1].GetComponent<CardDataBase>();
-  if(script.tipe == 'c' ) newcuerpoacuerpo2.Add(newhand2[n-1]);
-  if(script.tipe == 'd' ) newdistancia2.Add(newhand2[n-1]);
-  if(script.tipe == 'a' ) newasedio2.Add(newhand2[n-1]);
+  if(script.tipe == 'c' )
+  {
+    newcuerpoacuerpo2.Add(newhand2[n-1]);
+    valcuerpoacuerpo2.Add(script.power);
+  }
+  if(script.tipe == 'd' )
+  {
+   newdistancia2.Add(newhand2[n-1]);
+   valordistancia2.Add(script.power);
+  }
+  if(script.tipe == 'a' )
+  {
+   newasedio2.Add(newhand2[n-1]);
+    valorasedio2.Add(script.power);
+  }
+  if(script.tipe == 'w') {
+    for(int x =0; x< valcuerpoacuerpo2.Count; x++){
+     valcuerpoacuerpo2[x]++;
+    }
+        for(int x =0; x< valordistancia2.Count; x++){
+       valordistancia2[x]++;
+    }
+    for(int x =0; x< newasedio2.Count; x++){
+     valorasedio2[x]++;
+    }
+    }
   newhand2.RemoveAt(n-1);
   turn = true;
   }
@@ -266,17 +346,14 @@ void actualizacion(){
  
   int c=0;
 
-  for (int x=0; x< newcuerpoacuerpo1.Count; x++){
-    CardDataBase script = newcuerpoacuerpo1[x].GetComponent<CardDataBase>();
-    c+=script.power;
+  for (int x=0; x< valcuerpoacuerpo1.Count; x++){
+    c+=valcuerpoacuerpo1[x];
   }
-  for (int x=0; x< newdistancia1.Count; x++){
-    CardDataBase script = newdistancia1[x].GetComponent<CardDataBase>();
-    c+=script.power;
+  for (int x=0; x< valordistancia1.Count; x++){
+    c+=valordistancia1[x];
   }
-  for (int x=0; x< newasedio1.Count; x++){
-    CardDataBase script = newasedio1[x].GetComponent<CardDataBase>();
-    c+=script.power;
+  for (int x=0; x<valorasedio1.Count; x++){
+    c+=valorasedio1[x];
   }
   
   power1.text = c.ToString();
@@ -284,18 +361,16 @@ void actualizacion(){
    
   c=0;
  
- for (int x=0; x< newcuerpoacuerpo2.Count; x++){
-    CardDataBase script = newcuerpoacuerpo2[x].GetComponent<CardDataBase>();
-    c+=script.power;
+for (int x=0; x< valcuerpoacuerpo2.Count; x++){
+    c+=valcuerpoacuerpo2[x];
   }
-  for (int x=0; x< newdistancia2.Count; x++){
-    CardDataBase script = newdistancia2[x].GetComponent<CardDataBase>();
-    c+=script.power;
+  for (int x=0; x< valordistancia2.Count; x++){
+    c+=valordistancia2[x];
   }
-  for (int x=0; x< newasedio2.Count; x++){
-    CardDataBase script = newasedio2[x].GetComponent<CardDataBase>();
-    c+=script.power;
+  for (int x=0; x<valorasedio2.Count; x++){
+    c+=valorasedio2[x];
   }
+  
   
   power2.text = c.ToString();
 
@@ -413,6 +488,12 @@ void actualizacion(){
     newdistancia2.Clear();
     newasedio1.Clear();
     newasedio2.Clear();
+    valcuerpoacuerpo1.Clear();
+    valcuerpoacuerpo2.Clear();
+    valorasedio1.Clear();
+    valorasedio2.Clear();
+    valordistancia1.Clear();
+    valordistancia2.Clear();  
    }
   
   
@@ -470,11 +551,6 @@ void actualizacion(){
     actualizacion();
     win();    
   }
-
-  
-
-
-
 
 }
 

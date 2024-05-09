@@ -6,4 +6,5 @@ public class CardDataBase : MonoBehaviour
 {
    public int power;
    public char tipe;
+
 }

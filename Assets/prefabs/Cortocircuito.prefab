@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 5
   tipe: 99
+  tipe2: 105
 --- !u!1 &5725615183092417437
 GameObject:
   m_ObjectHideFlags: 0
