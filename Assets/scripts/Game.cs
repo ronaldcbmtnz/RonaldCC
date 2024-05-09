@@ -12,7 +12,7 @@ public class Game : MonoBehaviour
 {
 
 public TMP_Text power1, power2, gamewins1, gamewins2;
-public Image downcard1, downcard2;
+
 public List <GameObject> Deck = new List<GameObject>();
  List <GameObject> Deck1 = new List<GameObject>();
  List <GameObject> Deck2 = new List<GameObject>();
@@ -57,12 +57,24 @@ List <GameObject> newasedio1 = new List<GameObject>();
 
 
 void shuffle(int cantidad) {
+  
 for (int x=0; x<Deck.Count; x++){
-  Deck1.Add(Deck[x]);
+  System.Random random= new System.Random();
+ int j = random.Next(x,Deck.Count-1);
+  GameObject rr = Deck[x];
+  Deck[x]=Deck[j];
+  Deck[j]=rr;
 
+  Deck1.Add(Deck[x]);
+   
 }
-for(int x=Deck.Count-1; x>=0;x--)
+for(int x=0; x<Deck.Count;x++)
 {
+   System.Random random= new System.Random();
+ int j = random.Next(x,Deck.Count-1);
+  GameObject rr = Deck[x];
+  Deck[x]=Deck[j];
+  Deck[j]=rr;
   Deck2.Add(Deck[x]);
 }
 
@@ -134,17 +146,20 @@ bool turn = true ;
  int n;
 
  // En n llevaremos el conteo de las veces que se le da al boton pass por cada jugador, el cual se reiniciara cada vez que se juegue una carta
- int vict = 0;
+ int count = 0;
 
- public void playercard1(int aux){
-   
-   n=aux;
+
+/* Estas funciones son para jugar las cartas al campo en la faccion que les corresponde(van adjuntas a los botones que representan las cartas
+   de la mano)   */
+ public void playercard1(int aux)
+ {  
   
+   n=aux;
  }
 
  public void playercard2(){
   
-  vict = 0;
+  count = 0;
 
   if (turn){
  CardDataBase script = newhand1[n-1].GetComponent<CardDataBase>();
@@ -164,7 +179,7 @@ bool turn = true ;
     valorasedio1.Add(script.power);
    }
   if(script.tipe == 'w'){
-    // power1.text=(int.Parse(power1.text)+script.power).ToString();
+    
   
     for(int x =0; x< valcuerpoacuerpo1.Count; x++){
      valcuerpoacuerpo1[x]++;
@@ -217,10 +232,13 @@ bool turn = true ;
  }
 
 
-
+/* Esta funcion va adjunta a los botones de las cartas jefe y el parametro n si es ==  1 pues la carta jefe que ha sido 
+ seleccionada es Lilo y se activara su efecto el cual es elegir un numero de fila aleatorio del campo del contrario
+ y si esa fila tiene monstruos pues elegira uno de ellos al azar y lo elimina del campo de batalla y sino 
+ tiene monstruos pues perdiste el turno. Si m == 2 pues se activa el efecto del Hamsterviel y roba una carta.  */
  public void playerboss(int n){
 
-  vict = 0;
+  count = 0;
   
   if(n==1){
     if (turn == false) return ;
@@ -228,8 +246,8 @@ bool turn = true ;
     System.Random random = new System.Random();
      
 
-   
     System.Random random2 = new System.Random();
+    
     int aux = random2.Next(1,3);
     if(aux==1){
       if(newcuerpoacuerpo2.Count == 0 ) goto gaby;
@@ -264,10 +282,12 @@ bool turn = true ;
 
  }
 
+// Este metodo va adjunto al boton Pass y es el que permite pasar de turno
+
 
  public void passturn(){
 
- vict++;
+ count++;
  if(!turn) turn = true;
  else turn = false;
 
@@ -309,11 +329,11 @@ bool turn = true ;
 
 void actualizacion(){
 
+  // Lo primero que hacemos en este metodo es desactivar la mano del jugador dos si es el turno del jugador uno y viceversa
   
 
   if(turn){
-    downcard1.enabled = false;
-    downcard2.enabled = true;
+    
     for(int i=0;i<hand2.Count;i++)
     {
       Button rr = hand2[i].GetComponentInChildren<Button>();
@@ -328,8 +348,7 @@ void actualizacion(){
 
   }
   else {
-    downcard1.enabled = true;
-    downcard2.enabled = false;
+  
     for(int i=0;i<hand2.Count;i++)
     {
       Button rr = hand2[i].GetComponentInChildren<Button>();
@@ -342,7 +361,7 @@ void actualizacion(){
     }
   }
 
-
+  // Aqui lo que hacemos es sumar los puntos de cada carta en las facciones al acumulador de poder del jugador 
  
   int c=0;
 
@@ -371,10 +390,9 @@ for (int x=0; x< valcuerpoacuerpo2.Count; x++){
     c+=valorasedio2[x];
   }
   
-  
   power2.text = c.ToString();
 
-  
+  // Actualizacion de las manos...
 
   for(int x=0 ; x<newhand1.Count ; x++){
       Button aux = hand1[x].GetComponentInChildren<Button>();
@@ -400,7 +418,7 @@ for (int x=0; x< valcuerpoacuerpo2.Count; x++){
     aux.GetComponent<Image>().enabled = false;
   }
 
- 
+  //Actualizacion de cuerpo a cuerpo
 
   for(int x=0 ; x<newcuerpoacuerpo1.Count ; x++){
       Button aux = cuerpoacuerpo1[x].GetComponentInChildren<Button>();
@@ -426,7 +444,7 @@ for (int x=0; x< valcuerpoacuerpo2.Count; x++){
     aux.GetComponent<Image>().enabled = false;
   }
 
- 
+  // Actualizacion de la distancia 
 
   for(int x=0 ; x<newdistancia1.Count ; x++){
       Button aux = distancia1[x].GetComponentInChildren<Button>();
@@ -452,7 +470,7 @@ for (int x=0; x< valcuerpoacuerpo2.Count; x++){
     aux.GetComponent<Image>().enabled = false;
   }
 
-   
+   // Actualizacion del asedio
 
   for(int x=0 ; x<newasedio1.Count ; x++){
       Button aux = asedio1[x].GetComponentInChildren<Button>();
@@ -478,7 +496,6 @@ for (int x=0; x< valcuerpoacuerpo2.Count; x++){
     aux.GetComponent<Image>().enabled = false;
   }
 
-
 }
    
    void cleangame(){
@@ -496,9 +513,9 @@ for (int x=0; x< valcuerpoacuerpo2.Count; x++){
     valordistancia2.Clear();  
    }
   
-  
+   // Cuando el boton pass se ha presionado 2 veces seguidas sin jugar ninguna carta o efecto se ejecuta el metodo win 
   void win (){
-    if(vict==2){
+    if(count==2){
 
       if(int.Parse(power1.text)>int.Parse(power2.text)){
         int c = int.Parse(gamewins1.text);
@@ -521,7 +538,7 @@ for (int x=0; x< valcuerpoacuerpo2.Count; x++){
      
      cleangame();
      draw(2, true, true);
-     vict=0;
+     count=0;
      gameover ();
     }
   }
